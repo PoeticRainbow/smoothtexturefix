@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "smoothtexturefix",
+  "version": "${version}",
+  "name": "SmoothTextureFix",
+  "description": "Pixels were made to be crisp and clean! Fixes texture sampling introduced in 1.21.11+",
+  "authors": ["PoeticRainbow"],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/smoothtexturefix/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "io.github.poeticrainbow.smoothtexturefix.SmoothTextureFix"
+    ]
+  },
+  "mixins": [
+    "smoothtexturefix.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": ">1.21.10"
+  }
+}
