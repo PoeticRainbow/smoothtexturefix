@@ -22,7 +22,7 @@ public class SmoothTextureFix implements ClientModInitializer {
 
     public static void setFilterOverride(boolean value) {
         config.overrideTextureFilter(value);
-        Minecraft.getInstance().levelRenderer.onChangeMaxAnisotropy();
+        Minecraft.getInstance().levelRenderer.resetSampler();
         saveConfig();
     }
 
