@@ -14,7 +14,7 @@ public class LevelRendererMixin {
      * Overrides the texture filtering for the level renderer. Might break due to synthetic method reference
      * @author PoeticRainbow
      */
-    @ModifyArgs(method = "method_62214", at = @At(value = "INVOKE", target = "Lcom/mojang/blaze3d/systems/GpuDevice;createSampler(Lcom/mojang/blaze3d/textures/AddressMode;Lcom/mojang/blaze3d/textures/AddressMode;Lcom/mojang/blaze3d/textures/FilterMode;Lcom/mojang/blaze3d/textures/FilterMode;ILjava/util/OptionalDouble;)Lcom/mojang/blaze3d/textures/GpuSampler;"))
+    @ModifyArgs(method = "lambda$addMainPass$0", at = @At(value = "INVOKE", target = "Lcom/mojang/blaze3d/systems/GpuDevice;createSampler(Lcom/mojang/blaze3d/textures/AddressMode;Lcom/mojang/blaze3d/textures/AddressMode;Lcom/mojang/blaze3d/textures/FilterMode;Lcom/mojang/blaze3d/textures/FilterMode;ILjava/util/OptionalDouble;)Lcom/mojang/blaze3d/textures/GpuSampler;"))
     private static void smoothtexturefix$override_texture_filtering(Args args) {
         if (SmoothTextureFix.config.overrideTextureFilter()) {
             for (int i = 0; i < args.size(); i++) {
